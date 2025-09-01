@@ -126,7 +126,7 @@ export const Badge = React.forwardRef<any, BadgeProps>(
     }
 
     return (
-      <Box ref={ref} className={} style={badgeStyle} {...props}>
+      <Box ref={ref} style={badgeStyle} {...props}>
         <Text
           style={{
             fontSize: sizeStyles.fontSize,

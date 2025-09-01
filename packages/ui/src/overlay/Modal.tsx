@@ -130,7 +130,7 @@ export const Modal = React.forwardRef<any, ModalProps>(
       >
         <Pressable style={overlayStyles} onPress={handleOverlayPress}>
           <Pressable onPress={(e) => e.stopPropagation()}>
-            <Box className={} style={contentStyles}>
+            <Box style={contentStyles as any}>
               {children}
             </Box>
           </Pressable>
@@ -154,7 +154,7 @@ export interface ModalContentProps {
 export const ModalContent = React.forwardRef<any, ModalContentProps>(
   ({  style, children, ...props }, ref) => {
     return (
-      <VStack ref={ref} className={} style={style} space={spacing[4]} {...props}>
+      <VStack ref={ref} style={style} space={spacing[4]} {...props}>
         {children}
       </VStack>
     )
@@ -177,12 +177,11 @@ export const ModalHeader = React.forwardRef<any, ModalHeaderProps>(
     return (
       <Box
         ref={ref}
-        className={}
         style={{
           borderBottomWidth: 1,
           borderBottomColor: colors.gray[200],
           paddingBottom: spacing[4],
-          ...style,
+          ...style as any,
         }}
         {...props}
       >
@@ -206,7 +205,7 @@ export interface ModalBodyProps {
 export const ModalBody = React.forwardRef<any, ModalBodyProps>(
   ({  style, children, ...props }, ref) => {
     return (
-      <Box ref={ref} className={} style={style} {...props}>
+      <Box ref={ref} style={style} {...props}>
         {children}
       </Box>
     )
@@ -229,12 +228,11 @@ export const ModalFooter = React.forwardRef<any, ModalFooterProps>(
     return (
       <Box
         ref={ref}
-        className={}
         style={{
           borderTopWidth: 1,
           borderTopColor: colors.gray[200],
           paddingTop: spacing[4],
-          ...style,
+          ...(style as any),
         }}
         {...props}
       >

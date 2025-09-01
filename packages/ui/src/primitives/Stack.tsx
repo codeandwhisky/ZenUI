@@ -53,13 +53,12 @@ export const Stack = React.forwardRef<any, StackProps>(
       justify === 'space-around' ? 'space-around' :
       'space-evenly'
 
-    const stackStyle = {
+    const stackStyle = Object.assign({
       flexDirection,
       alignItems,
       justifyContent,
       flexWrap: wrap ? 'wrap' as const : 'nowrap' as const,
-      ...style,
-    }
+    }, style as any)
 
     const childrenWithSpacing = React.Children.map(children, (child, index) => {
       if (!React.isValidElement(child)) return child

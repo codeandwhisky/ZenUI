@@ -167,7 +167,7 @@ export const Input = React.forwardRef<TextInput, InputProps>(
         
         <TextInput
           ref={ref}
-          className={}
+            className={undefined}
           style={inputStyle}
           placeholder={placeholder}
           placeholderTextColor={colors.gray[400]}

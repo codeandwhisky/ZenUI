@@ -107,7 +107,7 @@ export const Avatar = React.forwardRef<any, AvatarProps>(
     // Show image if source is provided and no error occurred
     if (source && !imageError) {
       return (
-        <Box ref={ref} className={} style={avatarStyle} {...props}>
+        <Box ref={ref} style={avatarStyle} {...props}>
           <Image
             source={source}
             style={{
@@ -130,7 +130,7 @@ export const Avatar = React.forwardRef<any, AvatarProps>(
       }
       
       return (
-        <Box ref={ref} className={} style={childrenStyle} {...props}>
+        <Box ref={ref} style={childrenStyle} {...props}>
           {children}
         </Box>
       )
@@ -148,7 +148,7 @@ export const Avatar = React.forwardRef<any, AvatarProps>(
       }
       
       return (
-        <Box ref={ref} className={} style={initialsStyle} {...props}>
+        <Box ref={ref} style={initialsStyle} {...props}>
           <Text
             style={{
               fontSize,
@@ -171,7 +171,7 @@ export const Avatar = React.forwardRef<any, AvatarProps>(
     }
     
     return (
-      <Box ref={ref} className={} style={fallbackStyle} {...props}>
+      <Box ref={ref} style={fallbackStyle} {...props}>
         <Text
           style={{
             fontSize: Math.round(sizeValue * 0.4),

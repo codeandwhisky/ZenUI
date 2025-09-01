@@ -174,7 +174,6 @@ export const Button = React.forwardRef<any, ButtonProps>(
     return (
       <Pressable
         ref={ref}
-        className={}
         style={({ pressed }) => [
           buttonStyle,
           pressed && !isDisabled && !isLoading && {

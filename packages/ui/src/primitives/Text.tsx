@@ -118,14 +118,7 @@ export const Text = React.forwardRef<RNText, TextProps>(
   }, ref) => {
     const variantStyles = getVariantStyles(variant)
     
-    const computedStyle = {
-      ...variantStyles,
-      ...(size && { fontSize: fontSize[size] }),
-      ...(weight && { fontWeight: fontWeight[weight] }),
-      color,
-      textAlign: align,
-      ...style,
-    }
+  const computedStyle = Object.assign({}, variantStyles, (size && { fontSize: fontSize[size] }) as any, (weight && { fontWeight: fontWeight[weight] }) as any, { color, textAlign: align }, style as any)
 
     return (
       <RNText

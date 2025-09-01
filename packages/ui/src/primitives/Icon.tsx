@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, TextProps } from './Text'
 
-export interface IconProps extends Omit<TextProps, 'children'> {
+export interface IconProps extends Omit<TextProps, 'children' | 'size'> {
   /**
    * Icon name or unicode character
    */
@@ -18,11 +18,10 @@ export interface IconProps extends Omit<TextProps, 'children'> {
  */
 export const Icon = React.forwardRef<any, IconProps>(
   ({ name, size = 24, style, ...props }, ref) => {
-    const iconStyle = {
+    const iconStyle = Object.assign({
       fontSize: size,
       lineHeight: size,
-      ...style,
-    }
+    }, style as any)
 
     return (
       <Text
