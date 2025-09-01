@@ -1,0 +1,33 @@
+{
+  "name": "@zenui/theme",
+  "version": "1.0.0",
+  "description": "Design tokens, Tailwind config, and theming utilities for ZenUI",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "tailwind.config.js"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rm -rf lib",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-native": "^0.72.6",
+    "react": "^18.2.0",
+    "react-native": "^0.72.6",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.70.0"
+  }
+}
