@@ -1,18 +1,19 @@
 {
-  "name": "zenui-theme",
-  "version": "1.0.2",
+  "name": "@zenui/theme",
+  "version": "1.0.4",
   "description": "Design tokens, Tailwind config, and theming utilities for ZenUI",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib",
+    "dist",
     "tailwind.config.js"
   ],
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepare": "npm run build",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-    "clean": "rm -rf lib",
+    "clean": "rm -rf dist",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
