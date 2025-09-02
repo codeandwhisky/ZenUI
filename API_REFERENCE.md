@@ -1,4 +1,80 @@
-# ZenUI Component API Reference
+# ZenUI API Reference
+
+Complete API documentation for ZenUI components and enhanced theme system.
+
+## Enhanced Theme System API
+
+### ThemeProvider
+
+The enhanced theme provider with performance optimizations and responsive design support.
+
+```tsx
+import { ThemeProvider } from 'zenxui'
+
+interface ThemeProviderProps {
+  theme?: Theme                    // Custom theme configuration
+  children: React.ReactNode        // Child components
+  initialColorMode?: ColorMode     // Initial color mode ('light' | 'dark' | 'system')
+}
+```
+
+### createTheme
+
+Creates a custom theme by merging with the default theme configuration.
+
+```tsx
+import { createTheme } from 'zenxui'
+
+const customTheme = createTheme({
+  colors: {
+    primary: {
+      500: '#3b82f6',
+    },
+  },
+  spacing: {
+    xl: 40,
+  },
+})
+```
+
+### useResponsiveValue
+
+Resolve responsive values based on current screen breakpoint.
+
+```tsx
+import { useResponsiveValue } from 'zenxui'
+
+function ResponsiveComponent() {
+  const padding = useResponsiveValue({
+    base: 16,    // Mobile
+    sm: 20,      // Small tablets
+    md: 24,      // Tablets
+    lg: 32,      // Desktop
+  })
+  
+  return <Box style={{ padding }}>{/* Content */}</Box>
+}
+```
+
+### Performance Utilities
+
+```tsx
+import { 
+  getThemeCacheStats,
+  clearThemeCache,
+  configureCacheOptions 
+} from 'zenxui'
+
+// Monitor cache performance
+const stats = getThemeCacheStats()
+console.log(`Cache hit rate: ${stats.hitRate}%`)
+
+// Configure cache
+configureCacheOptions({
+  maxCacheSize: 1000,
+  enableDevLogging: true,
+})
+```
 
 ## Core Components
 
@@ -46,52 +122,93 @@ interface TextProps extends TextProps {
 <Text variant="caption">Additional information</Text>
 ```
 
-### Button
+### Button (Enhanced)
 
-Pressable button component with multiple variants and sizes.
+Pressable button component with comprehensive theming, states, and variants.
 
 ```tsx
 import { Button } from 'zenui-ui'
 
-interface ButtonProps extends Omit<PressableProps, 'style'> {
-  variant?: 'solid' | 'outline'
-  colorScheme?: 'primary' | 'secondary'
-  size?: 'sm' | 'md' | 'lg'
-  style?: ViewStyle
-  children?: React.ReactNode
+interface ButtonProps extends TouchableOpacityProps {
+  children: React.ReactNode
+  variant?: 'solid' | 'outline' | 'ghost' | 'link' | 'unstyled'
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  colorScheme?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info'
+  isLoading?: boolean
+  isDisabled?: boolean
+  leftIcon?: React.ReactNode
+  rightIcon?: React.ReactNode
+  loadingText?: string
 }
 ```
 
 **Variants:**
 - `solid` - Filled button with background color
 - `outline` - Transparent button with border
+- `ghost` - Transparent button without border
+- `link` - Text-style button with underline
+- `unstyled` - No default styling applied
 
 **Color Schemes:**
-- `primary` - Blue color scheme (#0ea5e9)
-- `secondary` - Gray color scheme (#64748b)
+- `primary` - Primary brand color
+- `secondary` - Secondary brand color
+- `success` - Green success color
+- `warning` - Orange warning color
+- `error` - Red error color
+- `info` - Blue info color
 
 **Sizes:**
-- `sm` - Small button (padding: 12x8px)
-- `md` - Medium button (padding: 16x12px) 
-- `lg` - Large button (padding: 24x16px)
+- `xs` - Extra small (padding: 8x4px, min-height: 24px)
+- `sm` - Small (padding: 12x6px, min-height: 32px)
+- `md` - Medium (padding: 16x8px, min-height: 40px)
+- `lg` - Large (padding: 20x12px, min-height: 48px)
+- `xl` - Extra large (padding: 24x16px, min-height: 56px)
+
+**States:**
+- `isLoading` - Shows loading indicator
+- `isDisabled` - Disabled state with reduced opacity
 
 **Example:**
 ```tsx
-<Button 
-  variant="solid" 
-  colorScheme="primary" 
-  size="md"
-  onPress={() => console.log('Pressed!')}
->
-  Click Me
+{/* Basic usage */}
+<Button variant="solid" colorScheme="primary" size="lg">
+  Primary Button
 </Button>
 
-<Button variant="outline" colorScheme="secondary">
-  Secondary Action
+{/* With icons */}
+<Button 
+  variant="outline" 
+  leftIcon={<Icon name="save" />}
+  rightIcon={<Icon name="arrow-right" />}
+>
+  Save & Continue
 </Button>
+
+{/* Loading states */}
+<Button isLoading>Loading...</Button>
+<Button isLoading loadingText="Saving...">Save</Button>
+
+{/* All variants */}
+<Button variant="solid">Solid</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="link">Link</Button>
+
+{/* All sizes */}
+<Button size="xs">Extra Small</Button>
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+<Button size="xl">Extra Large</Button>
+
+{/* All color schemes */}
+<Button colorScheme="primary">Primary</Button>
+<Button colorScheme="success">Success</Button>
+<Button colorScheme="warning">Warning</Button>
+<Button colorScheme="error">Error</Button>
 ```
 
-## Theme System
+## Enhanced Theme System
 
 ### ThemeProvider
 
