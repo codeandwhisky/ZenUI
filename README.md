@@ -834,7 +834,7 @@ function StyledComponent({ variant = 'primary', children }) {
 ```bash
 # 🚀 Setup for React Native + Web (30 seconds)
 npm install react-native-web
-npx zenui-config setup
+npx zenxui-config setup
 
 # ✨ That's it! Your components now work everywhere:
 # - iOS apps
@@ -854,7 +854,7 @@ npx zenui-config setup
 ### 🔧 **Framework Integration Made Simple**
 
 ```tsx
-// 🚀 Next.js + ZenUI (SSR ready!)
+// 🚀 Next.js + ZenXUI (SSR ready!)
 // pages/_app.js
 import { ThemeProvider } from 'zenxui'
 import { theme } from '../theme'
@@ -867,7 +867,7 @@ export default function App({ Component, pageProps }) {
   )
 }
 
-// 🎨 Expo + ZenUI (works out of the box!)
+// 🎨 Expo + ZenXUI (works out of the box!)
 // App.js
 import { ThemeProvider } from 'zenxui'
 import { Button } from 'zenui-ui'
@@ -880,7 +880,7 @@ export default function App() {
   )
 }
 
-// ⚡ Vite + ZenUI (blazing fast development!)
+// ⚡ Vite + ZenXUI (blazing fast development!)
 // src/main.jsx
 import { ThemeProvider } from 'zenxui'
 import { createRoot } from 'react-dom/client'
@@ -907,101 +907,101 @@ createRoot(document.getElementById('root')).render(
 ### 🎯 **Everything You Need to Master ZenUI**
 
 #### 📖 **Official Documentation**
-- **[Complete API Reference →](https://zenui.dev/docs/api)** - Every prop, every component, perfectly documented
-- **[Interactive Playground →](https://zenui.dev/playground)** - Try components live in your browser
-- **[Theme Builder →](https://zenui.dev/theme-builder)** - Visual theme creation tool
-- **[Migration Guides →](https://zenui.dev/docs/migration)** - Switch from other libraries in minutes
+- **[Complete API Reference →](https://zenxui.dev/docs/api)** - Every prop, every component, perfectly documented
+- **[Interactive Playground →](https://zenxui.dev/playground)** - Try components live in your browser
+- **[Theme Builder →](https://zenxui.dev/theme-builder)** - Visual theme creation tool
+- **[Migration Guides →](https://zenxui.dev/docs/migration)** - Switch from other libraries in minutes
 
 #### 🎥 **Video Tutorials**
-- **[Getting Started (5min) →](https://youtube.com/zenui-getting-started)** - Zero to hero in 5 minutes
-- **[Advanced Theming (15min) →](https://youtube.com/zenui-theming)** - Master the theme system
-- **[Performance Optimization →](https://youtube.com/zenui-performance)** - Squeeze every millisecond
+- **[Getting Started (5min) →](https://youtube.com/zenxui-getting-started)** - Zero to hero in 5 minutes
+- **[Advanced Theming (15min) →](https://youtube.com/zenxui-theming)** - Master the theme system
+- **[Performance Optimization →](https://youtube.com/zenxui-performance)** - Squeeze every millisecond
 
 #### 🛠️ **Developer Tools**
-- **[VS Code Extension →](https://marketplace.visualstudio.com/zenui-tools)** - IntelliSense and snippets
-- **[Figma Plugin →](https://figma.com/zenui-plugin)** - Design to code in one click
-- **[Chrome DevTools →](https://chrome.google.com/zenui-devtools)** - Debug themes and performance
+- **[VS Code Extension →](https://marketplace.visualstudio.com/zenxui-tools)** - IntelliSense and snippets
+- **[Figma Plugin →](https://figma.com/zenxui-plugin)** - Design to code in one click
+- **[Chrome DevTools →](https://chrome.google.com/zenxui-devtools)** - Debug themes and performance
 
 #### 📱 **Example Apps & Templates**
-- **[Starter Templates →](https://github.com/zenui/templates)** - Production-ready app templates
-- **[Component Gallery →](https://zenui.dev/gallery)** - See every component in action
-- **[Real-world Examples →](https://github.com/zenui/examples)** - Apps built by the community
+- **[Starter Templates →](https://github.com/zenxui/templates)** - Production-ready app templates
+- **[Component Gallery →](https://zenxui.dev/gallery)** - See every component in action
+- **[Real-world Examples →](https://github.com/zenxui/examples)** - Apps built by the community
 
 #### 🚀 **Advanced Guides**
-- **[Accessibility Best Practices →](https://zenui.dev/docs/accessibility)** - WCAG 2.1 compliance made easy
-- **[Performance Optimization →](https://zenui.dev/docs/performance)** - Make your app lightning fast  
-- **[Custom Components →](https://zenui.dev/docs/custom-components)** - Build your design system
-- **[Testing Strategies →](https://zenui.dev/docs/testing)** - Test ZenUI components effectively
+- **[Accessibility Best Practices →](https://zenxui.dev/docs/accessibility)** - WCAG 2.1 compliance made easy
+- **[Performance Optimization →](https://zenxui.dev/docs/performance)** - Make your app lightning fast  
+- **[Custom Components →](https://zenxui.dev/docs/custom-components)** - Build your design system
+- **[Testing Strategies →](https://zenxui.dev/docs/testing)** - Test ZenXUI components effectively
 
 #### 🏆 **Enterprise Resources**
-- **[Design System Guide →](https://zenui.dev/enterprise/design-systems)** - Scale design across teams
-- **[Migration Services →](https://zenui.dev/enterprise/migration)** - Professional migration support
-- **[Priority Support →](https://zenui.dev/enterprise/support)** - Direct access to ZenUI experts
+- **[Design System Guide →](https://zenxui.dev/enterprise/design-systems)** - Scale design across teams
+- **[Migration Services →](https://zenxui.dev/enterprise/migration)** - Professional migration support
+- **[Priority Support →](https://zenxui.dev/enterprise/support)** - Direct access to ZenXUI experts
 
 ### 💬 **Community & Support**
 
 #### 🤝 **Get Help & Connect**
-- **[Discord Community →](https://discord.gg/zenui)** - 10,000+ developers helping each other
-- **[Stack Overflow →](https://stackoverflow.com/questions/tagged/zenui)** - Technical Q&A with experts
-- **[GitHub Discussions →](https://github.com/zenui/zenui/discussions)** - Feature requests and ideas
-- **[Twitter →](https://twitter.com/zenui_dev)** - Latest updates and tips
+- **[Discord Community →](https://discord.gg/zenxui)** - 10,000+ developers helping each other
+- **[Stack Overflow →](https://stackoverflow.com/questions/tagged/zenxui)** - Technical Q&A with experts
+- **[GitHub Discussions →](https://github.com/zenxui/zenxui/discussions)** - Feature requests and ideas
+- **[Twitter →](https://twitter.com/zenxui_dev)** - Latest updates and tips
 
 #### 🐛 **Report Issues**
-- **[Bug Reports →](https://github.com/zenui/zenui/issues)** - Help us improve ZenUI
-- **[Feature Requests →](https://github.com/zenui/zenui/issues/new?template=feature_request.md)** - Suggest new features
+- **[Bug Reports →](https://github.com/zenxui/zenxui/issues)** - Help us improve ZenXUI
+- **[Feature Requests →](https://github.com/zenxui/zenxui/issues/new?template=feature_request.md)** - Suggest new features
 
 #### 📈 **Stay Updated**
-- **[Changelog →](https://zenui.dev/changelog)** - What's new in each release
-- **[Roadmap →](https://zenui.dev/roadmap)** - See what's coming next
-- **[Newsletter →](https://zenui.dev/newsletter)** - Monthly updates and tips
+- **[Changelog →](https://zenxui.dev/changelog)** - What's new in each release
+- **[Roadmap →](https://zenxui.dev/roadmap)** - See what's coming next
+- **[Newsletter →](https://zenxui.dev/newsletter)** - Monthly updates and tips
 
 ## 🤝 Contributing & Community
 
-### 🌟 **Join the ZenUI Revolution**
+### 🌟 **Join the ZenXUI Revolution**
 
 We're building the future of React Native and Web UI development, and we'd love your help!
 
 #### 🚀 **Ways to Contribute**
-- **[Contribute Code →](https://github.com/zenui/zenui/blob/main/CONTRIBUTING.md)** - Add features, fix bugs, improve performance
-- **[Write Documentation →](https://github.com/zenui/zenui-docs)** - Help others learn ZenUI
-- **[Create Examples →](https://github.com/zenui/examples)** - Show off what's possible
-- **[Report Bugs →](https://github.com/zenui/zenui/issues)** - Help us make ZenUI bulletproof
-- **[Suggest Features →](https://github.com/zenui/zenui/discussions)** - Shape the future of ZenUI
+- **[Contribute Code →](https://github.com/zenxui/zenxui/blob/main/CONTRIBUTING.md)** - Add features, fix bugs, improve performance
+- **[Write Documentation →](https://github.com/zenxui/zenxui-docs)** - Help others learn ZenXUI
+- **[Create Examples →](https://github.com/zenxui/examples)** - Show off what's possible
+- **[Report Bugs →](https://github.com/zenxui/zenxui/issues)** - Help us make ZenXUI bulletproof
+- **[Suggest Features →](https://github.com/zenxui/zenxui/discussions)** - Shape the future of ZenXUI
 
 #### 🏆 **Recognition for Contributors**
 - **Monthly spotlight** for top contributors
 - **Exclusive contributor Discord channel**
 - **Early access** to new features
 - **Personalized recommendations** on your GitHub profile
-- **ZenUI swag** for significant contributions
+- **ZenXUI swag** for significant contributions
 
 #### 👥 **Community Stats**
 - **10,000+** developers in our Discord
-- **500+** production apps using ZenUI  
+- **500+** production apps using ZenXUI  
 - **50+** open source contributors
 - **25+** countries represented
 - **99%** positive developer satisfaction rating
 
 ### 🎉 **Success Stories from the Community**
 
-> *"ZenUI helped us ship our MVP 3 weeks ahead of schedule. The component library just works."*  
+> *"ZenXUI helped us ship our MVP 3 weeks ahead of schedule. The component library just works."*  
 > — **Tech Startup Founder**
 
-> *"Migrated our entire design system to ZenUI over a weekend. Zero breaking changes."*  
+> *"Migrated our entire design system to ZenXUI over a weekend. Zero breaking changes."*  
 > — **Senior Frontend Engineer**
 
-> *"The accessibility features in ZenUI saved us months of compliance work."*  
+> *"The accessibility features in ZenXUI saved us months of compliance work."*  
 > — **Product Manager at Fortune 500**
 
 ## 📄 License
 
 **Apache License 2.0** - see [LICENSE](LICENSE) file for details.
 
-*ZenUI is free for commercial and personal use. Build amazing apps without worry.*
+*ZenXUI is free for commercial and personal use. Build amazing apps without worry.*
 
 ## 🙏 Acknowledgments & Inspiration
 
-ZenUI stands on the shoulders of giants. We're grateful to these amazing projects and communities:
+ZenXUI stands on the shoulders of giants. We're grateful to these amazing projects and communities:
 
 ### 🎨 **Design Philosophy Inspired By**
 - **[Tailwind CSS →](https://tailwindcss.com/)** - Utility-first CSS framework that changed everything
@@ -1035,7 +1035,7 @@ npm install zenui-ui zenxui
 
 **Built with ❤️ by developers, for developers**
 
-*ZenUI - Where performance meets developer happiness*
+*ZenXUI - Where performance meets developer happiness*
 
 ---
 
@@ -1045,7 +1045,7 @@ npm install zenui-ui zenxui
 - **30+ components** production-ready
 - **100%** TypeScript coverage
 - **WCAG 2.1** accessibility compliant
-- **10,000+** developers using ZenUI
-- **500+** production apps powered by ZenUI
+- **10,000+** developers using ZenXUI
+- **500+** production apps powered by ZenXUI
 
-**[🚀 Start Building Amazing Apps Today →](https://zenui.dev/docs/getting-started)**
+**[🚀 Start Building Amazing Apps Today →](https://zenxui.dev/docs/getting-started)**
