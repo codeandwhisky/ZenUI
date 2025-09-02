@@ -98,7 +98,7 @@ interface ButtonProps extends Omit<PressableProps, 'style'> {
 Provides theme context to all child components.
 
 ```tsx
-import { ThemeProvider } from 'zenui-theme'
+import { ThemeProvider } from 'zenui-core'
 
 interface ThemeProviderProps {
   children: ReactNode
@@ -108,7 +108,7 @@ interface ThemeProviderProps {
 
 **Example:**
 ```tsx
-import { ThemeProvider } from 'zenui-theme'
+import { ThemeProvider } from 'zenui-core'
 
 function App() {
   return (
@@ -124,7 +124,7 @@ function App() {
 Access theme values and functions.
 
 ```tsx
-import { useTheme } from 'zenui-theme'
+import { useTheme } from 'zenui-core'
 
 const { theme, colorMode, toggleColorMode, setColorMode } = useTheme()
 ```
@@ -140,7 +140,7 @@ const { theme, colorMode, toggleColorMode, setColorMode } = useTheme()
 Simplified hook for color mode management.
 
 ```tsx
-import { useColorMode } from 'zenui-theme'
+import { useColorMode } from 'zenui-core'
 
 const { colorMode, toggleColorMode, setColorMode } = useColorMode()
 ```
@@ -150,7 +150,7 @@ const { colorMode, toggleColorMode, setColorMode } = useColorMode()
 ### Colors
 
 ```tsx
-import { colors } from 'zenui-theme'
+import { colors } from 'zenui-core'
 
 // Primary colors (nested and flattened access)
 colors.primary[50]   // Lightest
@@ -168,7 +168,7 @@ colors.primary900
 ### Spacing
 
 ```tsx
-import { spacing } from 'zenui-theme'
+import { spacing } from 'zenui-core'
 
 // Named spacing aliases
 spacing[1]  // 4px
@@ -185,7 +185,7 @@ spacing.lg  // 24px (alias)
 ### Typography
 
 ```tsx
-import { fontSize, fontWeight, lineHeight } from 'zenui-theme'
+import { fontSize, fontWeight, lineHeight } from 'zenui-core'
 
 fontSize.xs    // 12px
 fontSize.sm    // 14px
@@ -206,7 +206,7 @@ lineHeight.loose   // 2
 ### Border Radius
 
 ```tsx
-import { borderRadius } from 'zenui-theme'
+import { borderRadius } from 'zenui-core'
 
 borderRadius.none  // 0
 borderRadius.sm    // 2px

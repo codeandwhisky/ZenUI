@@ -18,13 +18,13 @@ This guide will help you integrate ZenUI into your React Native or React Native 
 ### NPM
 
 ```bash
-npm install zenui-ui zenui-theme
+npm install zenui-ui zenui-core
 ```
 
 ### Yarn
 
 ```bash
-yarn add zenui-ui zenui-theme
+yarn add zenui-ui zenui-core
 ```
 
 ### Peer Dependencies
@@ -45,7 +45,7 @@ In your main App component:
 // App.tsx
 import React from 'react'
 import { SafeAreaView } from 'react-native'
-import { ThemeProvider } from 'zenui-theme'
+import { ThemeProvider } from 'zenui-core'
 import { Box, Text, Button } from 'zenui-ui'
 
 export default function App() {
@@ -189,7 +189,7 @@ module.exports = nextConfig
 ```tsx
 // pages/_app.tsx
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'zenui-theme'
+import { ThemeProvider } from 'zenui-core'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -233,7 +233,7 @@ npm install zenui-ui zenui-theme
 ```tsx
 // App.tsx
 import { StatusBar } from 'expo-status-bar'
-import { ThemeProvider } from 'zenui-theme'
+import { ThemeProvider } from 'zenui-core'
 import { Box, Text, Button } from 'zenui-ui'
 
 export default function App() {
@@ -271,7 +271,7 @@ For Expo Web, add to `app.json`:
 
 ```tsx
 // theme/index.ts
-import { colors as defaultColors } from 'zenui-theme'
+import { colors as defaultColors } from 'zenui-core'
 
 export const customTheme = {
   colors: {
@@ -295,7 +295,7 @@ export const customTheme = {
 
 ```tsx
 // App.tsx
-import { ThemeProvider, useColorMode } from 'zenui-theme'
+import { ThemeProvider, useColorMode } from 'zenui-core'
 import { Button } from 'zenui-ui'
 
 function ThemeToggle() {
@@ -383,7 +383,7 @@ src/
 
 ```tsx
 // utils/styles.ts
-import { spacing, colors } from 'zenui-theme'
+import { spacing, colors } from 'zenui-core'
 
 export const commonStyles = {
   container: {

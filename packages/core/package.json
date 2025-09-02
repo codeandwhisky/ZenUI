@@ -1,7 +1,7 @@
 {
-  "name": "zenui-theme",
-  "version": "1.1.1",
-  "description": "Design tokens, Tailwind config, and theming utilities for ZenUI",
+  "name": "zenui-core",
+  "version": "1.0.0",
+  "description": "Core design tokens, theming utilities, and essential components for ZenUI",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
