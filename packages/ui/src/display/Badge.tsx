@@ -1,6 +1,6 @@
 import React from 'react'
 import { ViewStyle } from 'react-native'
-import { cn, colors, borderRadius, spacing, fontSize } from '@zenui/theme'
+import { cn, colors, borderRadius, spacing, fontSize } from 'zenui-theme'
 import { Box } from '../primitives/Box'
 import { Text } from '../primitives/Text'
 

@@ -1,5 +1,5 @@
 {
-  "name": "@zenui/playground",
+  "name": "zenui-playground",
   "version": "1.0.0",
   "description": "ZenUI playground and example app",
   "main": "index.js",
@@ -13,8 +13,8 @@
     "type-check": "echo 'Type check passed'"
   },
   "dependencies": {
-    "@zenui/theme": "file:../theme",
-    "@zenui/ui": "file:../ui",
+  "zenui-theme": "file:../theme",
+  "zenui-ui": "file:../ui",
     "expo": "~49.0.10",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",

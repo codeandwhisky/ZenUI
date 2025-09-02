@@ -7,7 +7,7 @@
 A flexible container component that serves as the foundation for layout.
 
 ```tsx
-import { Box } from '@zenui/ui'
+import { Box } from 'zenui-ui'
 
 interface BoxProps extends ViewProps {
   children?: React.ReactNode
@@ -26,7 +26,7 @@ interface BoxProps extends ViewProps {
 Typography-aware text component with consistent styling.
 
 ```tsx
-import { Text } from '@zenui/ui'
+import { Text } from 'zenui-ui'
 
 interface TextProps extends TextProps {
   variant?: 'heading' | 'body' | 'caption'
@@ -51,7 +51,7 @@ interface TextProps extends TextProps {
 Pressable button component with multiple variants and sizes.
 
 ```tsx
-import { Button } from '@zenui/ui'
+import { Button } from 'zenui-ui'
 
 interface ButtonProps extends Omit<PressableProps, 'style'> {
   variant?: 'solid' | 'outline'
@@ -98,7 +98,7 @@ interface ButtonProps extends Omit<PressableProps, 'style'> {
 Provides theme context to all child components.
 
 ```tsx
-import { ThemeProvider } from '@zenui/theme'
+import { ThemeProvider } from 'zenui-theme'
 
 interface ThemeProviderProps {
   children: ReactNode
@@ -108,7 +108,7 @@ interface ThemeProviderProps {
 
 **Example:**
 ```tsx
-import { ThemeProvider } from '@zenui/theme'
+import { ThemeProvider } from 'zenui-theme'
 
 function App() {
   return (
@@ -124,7 +124,7 @@ function App() {
 Access theme values and functions.
 
 ```tsx
-import { useTheme } from '@zenui/theme'
+import { useTheme } from 'zenui-theme'
 
 const { theme, colorMode, toggleColorMode, setColorMode } = useTheme()
 ```
@@ -140,7 +140,7 @@ const { theme, colorMode, toggleColorMode, setColorMode } = useTheme()
 Simplified hook for color mode management.
 
 ```tsx
-import { useColorMode } from '@zenui/theme'
+import { useColorMode } from 'zenui-theme'
 
 const { colorMode, toggleColorMode, setColorMode } = useColorMode()
 ```
@@ -150,7 +150,7 @@ const { colorMode, toggleColorMode, setColorMode } = useColorMode()
 ### Colors
 
 ```tsx
-import { colors } from '@zenui/theme'
+import { colors } from 'zenui-theme'
 
 // Primary colors (nested and flattened access)
 colors.primary[50]   // Lightest
@@ -168,7 +168,7 @@ colors.primary900
 ### Spacing
 
 ```tsx
-import { spacing } from '@zenui/theme'
+import { spacing } from 'zenui-theme'
 
 // Named spacing aliases
 spacing[1]  // 4px
@@ -185,7 +185,7 @@ spacing.lg  // 24px (alias)
 ### Typography
 
 ```tsx
-import { fontSize, fontWeight, lineHeight } from '@zenui/theme'
+import { fontSize, fontWeight, lineHeight } from 'zenui-theme'
 
 fontSize.xs    // 12px
 fontSize.sm    // 14px
@@ -206,7 +206,7 @@ lineHeight.loose   // 2
 ### Border Radius
 
 ```tsx
-import { borderRadius } from '@zenui/theme'
+import { borderRadius } from 'zenui-theme'
 
 borderRadius.none  // 0
 borderRadius.sm    // 2px

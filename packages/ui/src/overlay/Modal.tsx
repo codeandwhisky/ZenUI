@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal as RNModal, ModalProps as RNModalProps, Pressable, ViewStyle } from 'react-native'
-import { cn, colors, borderRadius, spacing } from '@zenui/theme'
+import { cn, colors, borderRadius, spacing } from 'zenui-theme'
 import { Box } from '../primitives/Box'
 import { VStack } from '../primitives/Stack'
 

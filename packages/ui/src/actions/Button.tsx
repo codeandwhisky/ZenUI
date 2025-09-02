@@ -1,6 +1,6 @@
 import React from 'react'
 import { Pressable, PressableProps, ViewStyle } from 'react-native'
-import { cn, colors, borderRadius, spacing } from '@zenui/theme'
+import { cn, colors, borderRadius, spacing } from 'zenui-theme'
 import { Text } from '../primitives/Text'
 import { HStack } from '../primitives/Stack'
 import { Icon } from '../primitives/Icon'

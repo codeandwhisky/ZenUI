@@ -17,17 +17,17 @@ A cross-platform, utility-first, themeable design UI library for React Native an
 ### Installation
 
 ```bash
-npm install @zenui/ui zenui-theme
+npm install zenui-ui zenui-theme
 # or
-yarn add @zenui/ui zenui-theme
+yarn add zenui-ui zenui-theme
 ```
 
 ### Basic Usage
 
 ```tsx
 import React from 'react'
-import { ThemeProvider } from '@zenui/theme'
-import { Box, Text, Button } from '@zenui/ui'
+import { ThemeProvider } from 'zenui-theme'
+import { Box, Text, Button } from 'zenui-ui'
 
 export default function App() {
   return (
@@ -109,7 +109,7 @@ const customStyle = {
 ### Button
 
 ```tsx
-import { Button } from '@zenui/ui'
+import { Button } from 'zenui-ui'
 
 function ButtonExample() {
   return (
@@ -131,7 +131,7 @@ function ButtonExample() {
 ### Text
 
 ```tsx
-import { Text } from '@zenui/ui'
+import { Text } from 'zenui-ui'
 
 function TextExample() {
   return (
@@ -148,7 +148,7 @@ function TextExample() {
 ### Layout
 
 ```tsx
-import { Box, VStack, HStack } from '@zenui/ui'
+import { Box, VStack, HStack } from 'zenui-ui'
 
 function LayoutExample() {
   return (
@@ -171,7 +171,7 @@ function LayoutExample() {
 ### Custom Theme
 
 ```tsx
-import { ThemeProvider } from '@zenui/theme'
+import { ThemeProvider } from 'zenui-theme'
 
 const customTheme = {
   colors: {
@@ -194,7 +194,7 @@ function App() {
 ### Styled Components
 
 ```tsx
-import { Box, Text } from '@zenui/ui'
+import { Box, Text } from 'zenui-ui'
 
 const Card = ({ children, ...props }) => (
   <Box

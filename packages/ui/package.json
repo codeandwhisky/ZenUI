@@ -1,9 +1,9 @@
 {
-  "name": "cw-zenui-ui",
+  "name": "zenui-ui",
   "version": "1.0.0",
   "description": "Core UI components for ZenUI design system",
   "main": "lib/index.js",
-  "module": "lib/index.esm.js",
+  "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
   "files": [
     "lib"
@@ -15,7 +15,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@zenui/theme": "file:../theme",
+    "zenui-theme": "file:../theme",
     "clsx": "^2.0.0"
   },
   "devDependencies": {

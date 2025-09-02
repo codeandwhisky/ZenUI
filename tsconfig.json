@@ -17,8 +17,8 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "@zenui/theme": ["./packages/theme/src"],
-      "@zenui/ui": ["./packages/ui/src"]
+      "zenui-theme": ["./packages/theme/src"],
+      "zenui-ui": ["./packages/ui/src"]
     }
   },
   "include": ["packages/**/*"],

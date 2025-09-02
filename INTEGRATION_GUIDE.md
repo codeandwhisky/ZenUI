@@ -18,13 +18,13 @@ This guide will help you integrate ZenUI into your React Native or React Native 
 ### NPM
 
 ```bash
-npm install @zenui/ui @zenui/theme
+npm install zenui-ui zenui-theme
 ```
 
 ### Yarn
 
 ```bash
-yarn add @zenui/ui @zenui/theme
+yarn add zenui-ui zenui-theme
 ```
 
 ### Peer Dependencies
@@ -45,8 +45,8 @@ In your main App component:
 // App.tsx
 import React from 'react'
 import { SafeAreaView } from 'react-native'
-import { ThemeProvider } from '@zenui/theme'
-import { Box, Text, Button } from '@zenui/ui'
+import { ThemeProvider } from 'zenui-theme'
+import { Box, Text, Button } from 'zenui-ui'
 
 export default function App() {
   return (
@@ -189,7 +189,7 @@ module.exports = nextConfig
 ```tsx
 // pages/_app.tsx
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from '@zenui/theme'
+import { ThemeProvider } from 'zenui-theme'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -204,7 +204,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 ```tsx
 // pages/index.tsx
-import { Box, Text, Button } from '@zenui/ui'
+import { Box, Text, Button } from 'zenui-ui'
 
 export default function Home() {
   return (
@@ -225,7 +225,7 @@ export default function Home() {
 ```bash
 npx create-expo-app MyZenUIApp
 cd MyZenUIApp
-npm install @zenui/ui @zenui/theme
+npm install zenui-ui zenui-theme
 ```
 
 ### 2. App Configuration
@@ -233,8 +233,8 @@ npm install @zenui/ui @zenui/theme
 ```tsx
 // App.tsx
 import { StatusBar } from 'expo-status-bar'
-import { ThemeProvider } from '@zenui/theme'
-import { Box, Text, Button } from '@zenui/ui'
+import { ThemeProvider } from 'zenui-theme'
+import { Box, Text, Button } from 'zenui-ui'
 
 export default function App() {
   return (
@@ -271,7 +271,7 @@ For Expo Web, add to `app.json`:
 
 ```tsx
 // theme/index.ts
-import { colors as defaultColors } from '@zenui/theme'
+import { colors as defaultColors } from 'zenui-theme'
 
 export const customTheme = {
   colors: {
@@ -295,8 +295,8 @@ export const customTheme = {
 
 ```tsx
 // App.tsx
-import { ThemeProvider, useColorMode } from '@zenui/theme'
-import { Button } from '@zenui/ui'
+import { ThemeProvider, useColorMode } from 'zenui-theme'
+import { Button } from 'zenui-ui'
 
 function ThemeToggle() {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -351,7 +351,7 @@ export default function App() {
 
 ```tsx
 // types/zenui.d.ts
-declare module '@zenui/ui' {
+declare module 'zenui-ui' {
   export interface CustomTheme {
     colors: {
       brand: {
@@ -406,7 +406,7 @@ export const commonStyles = {
 
 ```tsx
 // components/ui/Card.tsx
-import { Box, BoxProps } from '@zenui/ui'
+import { Box, BoxProps } from 'zenui-ui'
 import { commonStyles } from '@/utils/styles'
 
 interface CardProps extends BoxProps {

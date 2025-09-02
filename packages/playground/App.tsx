@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ScrollView, SafeAreaView } from 'react-native'
-import { ThemeProvider, useColorMode } from '@zenui/theme'
-import { Box, Text, Button } from '@zenui/ui'
+import { ThemeProvider, useColorMode } from 'zenui-theme'
+import { Box, Text, Button } from 'zenui-ui'
 
 // Theme toggle component
 function ThemeToggle() {
