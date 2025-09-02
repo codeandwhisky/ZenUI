@@ -251,7 +251,7 @@ export const animations: Animations = {
 export const defaultConfig: ThemeConfig = {
   initialColorMode: 'light',
   useSystemColorMode: false,
-  cssVarPrefix: 'zenui',
+  cssVarPrefix: 'zenxui',
   strictMode: false,
   disableAnimations: false,
   reducedMotion: 'user',

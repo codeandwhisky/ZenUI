@@ -1,8 +1,8 @@
-# ZenUI
+# ZenXUI
 
-The **fastest**, **most flexible**, and **developer-friendly** UI library for React Native and Web applications. ZenUI isn't just another component library—it's a **game-changing** solution that delivers unprecedented performance while maintaining the simplicity developers love.
+The **fastest**, **most flexible**, and **developer-friendly** UI library for React Native and Web applications. ZenXUI isn't just another component library—it's a **game-changing** solution that delivers unprecedented performance while maintaining the simplicity developers love.
 
-## 🔥 Why ZenUI Outperforms Every Other UI Library
+## 🔥 Why ZenXUI Outperforms Every Other UI Library
 
 ### ⚡ Blazing Fast Performance
 - **90% faster** style resolution than other libraries (React Native Elements, NativeBase, UI Kitten)
@@ -40,108 +40,26 @@ The **fastest**, **most flexible**, and **developer-friendly** UI library for Re
 
 | Library | Bundle Size | Style Resolution | First Render | Theme Switch | Memory Usage |
 |---------|-------------|------------------|--------------|--------------|---------------|
-| **ZenUI** | **15KB** | **0.1ms** | **45ms** | **16ms** | **2.1MB** |
+| **ZenXUI** | **15KB** | **0.1ms** | **45ms** | **16ms** | **2.1MB** |
 | React Native Elements | 42KB | 1.2ms | 120ms | 85ms | 4.8MB |
 | NativeBase | 38KB | 0.8ms | 95ms | 72ms | 4.2MB |
 | UI Kitten | 35KB | 0.9ms | 110ms | 68ms | 3.9MB |
 | React Native Paper | 45KB | 1.1ms | 130ms | 90ms | 5.1MB |
 
-*Benchmarks run on iPhone 13 Pro, Android Pixel 6, Chrome Desktop. [View full benchmark suite →](https://zenui-benchmarks.example.com)*
-
-## 🔥 Developer Success Stories
-
-> *"Migrated from NativeBase to ZenUI and saw 40% improvement in app performance. The theme system is pure magic."*  
-> — **Sarah Chen**, Senior Developer at Shopify
-
-> *"ZenUI's TypeScript support is unmatched. IntelliSense actually helps instead of getting in the way."*  
-> — **Marcus Rodriguez**, Lead Engineer at Airbnb
-
-> *"Cut our design system implementation time from 3 weeks to 2 days. ZenUI just gets it right."*  
-> — **Priya Patel**, Design Systems Lead at Stripe
-
-## 🆚 Why Developers Are Switching From Other Libraries
-
-### 🏃‍♂️ **From React Native Elements**
-```tsx
-// React Native Elements - Verbose and slow
-<Button
-  title="Sign Up"
-  buttonStyle={{
-    backgroundColor: '#007AFF',
-    borderRadius: 8,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-  }}
-  titleStyle={{ fontSize: 16, fontWeight: '600' }}
-/>
-
-// ZenUI - Clean and fast
-<Button variant="solid" colorScheme="primary" size="lg">
-  Sign Up
-</Button>
-```
-
-### 🔄 **From NativeBase**
-```tsx
-// NativeBase - Complex theme setup
-const theme = extendTheme({
-  components: {
-    Button: {
-      baseStyle: {
-        rounded: 'md',
-      },
-      variants: {
-        solid: {
-          bg: 'primary.500',
-          _pressed: {
-            bg: 'primary.600',
-          },
-        },
-      },
-    },
-  },
-})
-
-// ZenUI - Intelligent defaults, minimal config
-const theme = createTheme({
-  colors: {
-    primary: { 500: '#007AFF' }
-  }
-}) // That's it! 🎉
-```
-
-### 🎨 **From UI Kitten**
-```tsx
-// UI Kitten - Theme mapping nightmare
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: 'color-primary-500',
-    borderRadius: 'border-radius-medium',
-  },
-})
-
-// ZenUI - Intuitive and powerful
-<Button 
-  style={theme => ({
-    backgroundColor: theme.colors.primary[500],
-    borderRadius: theme.borderRadius.md,
-  })}
-/>
-```
 
 ## 🚀 Get Started in Under 5 Minutes
 
 ### Installation
 
 ```bash
-npm install zenui-ui zenxui
+npm install zenxui
 # or
-yarn add zenui-ui zenxui
+yarn add zenxui
 # or (for the speed demons)
-pnpm add zenui-ui zenxui
+pnpm add zenxui
 ```
 
-**🎉 Zero configuration required!** ZenUI works out of the box with:
+**🎉 Zero configuration required!** ZenXUI works out of the box with:
 - **Expo** (managed & bare workflow)
 - **React Native CLI**
 - **Next.js** (with react-native-web)
@@ -153,7 +71,7 @@ pnpm add zenui-ui zenxui
 ```tsx
 import React from 'react'
 import { ThemeProvider, createTheme } from 'zenxui'
-import { Box, Text, Button, VStack } from 'zenui-ui'
+import { Box, Text, Button, VStack } from 'zenxui'
 
 // Create a theme in seconds (not hours!)
 const theme = createTheme({
@@ -172,7 +90,7 @@ export default function App() {
             size={{ base: "xl", md: "3xl" }} // Responsive sizes!
             gradient={["brand.500", "purple.600"]} // Gradient text!
           >
-            Welcome to ZenUI
+            Welcome to ZenXUI
           </Text>
           
           <Text variant="body" textAlign="center" maxW="md">
@@ -245,11 +163,10 @@ export default function App() {
 
 **🎊 Total: 30+ production-ready components** vs other libraries that give you 10-15 half-baked ones.
 
-> **Fun Fact:** Every ZenUI component has been battle-tested in apps with **10M+ downloads**. No more "works on my machine" moments!
 
 ## 🎨 The Theme System That Changes Everything
 
-**Stop wrestling with stylesheets.** ZenUI's theme system is so intuitive, you'll wonder how you ever lived without it.
+**Stop wrestling with stylesheets.** ZenXUI's theme system is so intuitive, you'll wonder how you ever lived without it.
 
 ### 🧠 **Intelligent by Default**
 - **Auto-completion** for every style property
@@ -262,8 +179,6 @@ export default function App() {
 - **Bundle tree-shaking** removes unused components
 - **Lazy evaluation** of theme values
 - **Zero re-renders** on theme changes
-
-### 🎯 **Features That Make Designers Happy**
 
 ### 🎯 **Features That Make Designers Happy**
 - **Design token inheritance** - Change brand colors globally in one place
@@ -281,7 +196,7 @@ import { createTheme, ThemeProvider } from 'zenxui'
 const gameChangingTheme = createTheme({
   // 🌈 Just provide your brand color - we'll generate the rest!
   colors: {
-    brand: '#6366f1', // ZenUI auto-generates 50-950 shades!
+    brand: '#6366f1', // ZenXUI auto-generates 50-950 shades!
     success: '#10b981',
     warning: '#f59e0b',
     error: '#ef4444',
@@ -325,10 +240,10 @@ function App() {
 }
 
 // 🎉 Result: A complete design system in under 30 lines!
-// Other libraries need 200+ lines for the same result
+// Other libraries need lot of lines for the same result
 ```
 
-**🤯 What ZenUI did automatically:**
+**🤯 What ZenXUI did automatically:**
 - ✅ Generated 450 color variations from 4 base colors
 - ✅ Created dark mode variants for every color
 - ✅ Set up responsive breakpoints for all devices
@@ -337,7 +252,7 @@ function App() {
 
 ### 📱 **Responsive Design That Actually Responds**
 
-**Forget CSS media queries.** ZenUI makes responsive design as easy as providing an object:
+**Forget CSS media queries.** ZenXUI makes responsive design as easy as providing an object:
 
 ```tsx
 import { Box, Text, useResponsiveValue } from 'zenxui'
@@ -369,7 +284,7 @@ function ResponsiveDesignMadeEasy() {
 // - React Native Elements: Not supported
 // - NativeBase: Requires complex breakpoint setup
 // - UI Kitten: Manual CSS media queries needed
-// - ZenUI: Just works™️
+// - ZenXUI: Just works™️
 ```
 
 **🎊 Responsive features that blow minds:**
@@ -430,7 +345,7 @@ const customStyle = {
 // - React Native Elements: ~50 tokens
 // - NativeBase: ~100 tokens  
 // - UI Kitten: ~80 tokens
-// - ZenUI: 400+ tokens with perfect organization
+// - ZenXUI: 400+ tokens with perfect organization
 ```
 
 ## 🎯 Component Examples That Showcase Real Power
@@ -438,7 +353,7 @@ const customStyle = {
 ### 🚀 **Button Component: 15 Variants, Infinite Possibilities**
 
 ```tsx
-import { Button, HStack, VStack } from 'zenui-ui'
+import { Button, HStack, VStack } from 'zenxui'
 
 function ButtonShowcase() {
   return (
@@ -512,7 +427,7 @@ function ButtonShowcase() {
 }
 
 // 🏆 What you get vs other libraries:
-// ✅ ZenUI: 15 variants, 5 sizes, unlimited customization
+// ✅ ZenXUI: 15 variants, 5 sizes, unlimited customization
 // ❌ React Native Elements: 3 variants, basic styling
 // ❌ NativeBase: 4 variants, limited customization
 // ❌ UI Kitten: 6 variants, complex theming required
@@ -521,7 +436,7 @@ function ButtonShowcase() {
 ### 📝 **Typography That Makes Content Shine**
 
 ```tsx
-import { Text, VStack } from 'zenui-ui'
+import { Text, VStack } from 'zenxui'
 
 function TypographyThatWows() {
   return (
@@ -590,7 +505,6 @@ function TypographyThatWows() {
 // ✅ Rich text composition
 ```
 
-## ⚡ Performance That Breaks All Records
 
 ### 🚀 **The Caching System That Changes Everything**
 
@@ -622,31 +536,11 @@ function PerformanceMonitor() {
 // ✅ Faster app startup times
 ```
 
-### 📈 **Real-World Performance Gains**
-
-| Metric | Before ZenUI | After ZenUI | Improvement |
-|--------|--------------|-------------|-------------|
-| **App Startup Time** | 2.3s | 1.4s | **39% faster** |
-| **Component Render Time** | 16ms | 2ms | **87% faster** |
-| **Memory Usage** | 85MB | 52MB | **39% less** |
-| **Bundle Size** | 2.1MB | 1.3MB | **38% smaller** |
-| **Battery Life** | 6.2hrs | 8.1hrs | **31% longer** |
-
-*Results from real production apps with 1M+ users*
-
-### 🧠 **Smart Optimizations You Get for Free**
-
-- **Automatic tree-shaking**: Only bundle components you actually use
-- **Style memoization**: Computed styles cached across renders  
-- **Responsive optimization**: Breakpoint calculations cached
-- **Theme inheritance**: Cascading values computed once
-- **Bundle splitting**: Load components on-demand
-- **Memory management**: LRU cache prevents memory leaks
 
 ### 🎨 **Layout System That Just Works**
 
 ```tsx
-import { Box, VStack, HStack, Grid } from 'zenui-ui'
+import { Box, VStack, HStack, Grid } from 'zenxui'
 
 function LayoutMastery() {
   return (
@@ -698,7 +592,7 @@ function LayoutMastery() {
 // 🏆 Layout comparison:
 // ❌ CSS Flexbox: 20 lines of complex CSS
 // ❌ React Native: Manual calculations and styling
-// ✅ ZenUI: 3 props, perfect results
+// ✅ ZenXUI: 3 props, perfect results
 ```
 
 ## 🎨 Advanced Customization That Scales
@@ -706,7 +600,7 @@ function LayoutMastery() {
 ### 🔧 **Create Custom Components in Minutes**
 
 ```tsx
-import { Box, Text, createComponent } from 'zenui-ui'
+import { Box, Text, createComponent } from 'zenxui'
 
 // 🎯 Build your own design system components
 const Card = createComponent({
@@ -827,24 +721,6 @@ function StyledComponent({ variant = 'primary', children }) {
 // ✅ TypeScript intelligent autocomplete
 ```
 
-## 🌐 Cross-Platform Excellence
-
-### 📱 **React Native + Web: One Codebase, Every Platform**
-
-```bash
-# 🚀 Setup for React Native + Web (30 seconds)
-npm install react-native-web
-npx zenxui-config setup
-
-# ✨ That's it! Your components now work everywhere:
-# - iOS apps
-# - Android apps  
-# - Web browsers
-# - Electron desktop apps
-# - Chrome extensions
-# - Progressive Web Apps
-```
-
 **🎯 Platform-specific optimizations built-in:**
 - **iOS**: Native feel with platform-specific shadows and haptics
 - **Android**: Material Design compliance and ripple effects
@@ -870,7 +746,7 @@ export default function App({ Component, pageProps }) {
 // 🎨 Expo + ZenXUI (works out of the box!)
 // App.js
 import { ThemeProvider } from 'zenxui'
-import { Button } from 'zenui-ui'
+import { Button } from 'zenxui'
 
 export default function App() {
   return (
@@ -904,7 +780,7 @@ createRoot(document.getElementById('root')).render(
 
 ## 📚 Documentation & Resources
 
-### 🎯 **Everything You Need to Master ZenUI**
+### 🎯 **Everything You Need to Master ZenXUI**
 
 #### 📖 **Official Documentation**
 - **[Complete API Reference →](https://zenxui.dev/docs/api)** - Every prop, every component, perfectly documented
@@ -968,30 +844,6 @@ We're building the future of React Native and Web UI development, and we'd love 
 - **[Report Bugs →](https://github.com/zenxui/zenxui/issues)** - Help us make ZenXUI bulletproof
 - **[Suggest Features →](https://github.com/zenxui/zenxui/discussions)** - Shape the future of ZenXUI
 
-#### 🏆 **Recognition for Contributors**
-- **Monthly spotlight** for top contributors
-- **Exclusive contributor Discord channel**
-- **Early access** to new features
-- **Personalized recommendations** on your GitHub profile
-- **ZenXUI swag** for significant contributions
-
-#### 👥 **Community Stats**
-- **10,000+** developers in our Discord
-- **500+** production apps using ZenXUI  
-- **50+** open source contributors
-- **25+** countries represented
-- **99%** positive developer satisfaction rating
-
-### 🎉 **Success Stories from the Community**
-
-> *"ZenXUI helped us ship our MVP 3 weeks ahead of schedule. The component library just works."*  
-> — **Tech Startup Founder**
-
-> *"Migrated our entire design system to ZenXUI over a weekend. Zero breaking changes."*  
-> — **Senior Frontend Engineer**
-
-> *"The accessibility features in ZenXUI saved us months of compliance work."*  
-> — **Product Manager at Fortune 500**
 
 ## 📄 License
 
@@ -1028,7 +880,7 @@ ZenXUI stands on the shoulders of giants. We're grateful to these amazing projec
 
 ```bash
 # Join thousands of developers who've made the switch
-npm install zenui-ui zenxui
+npm install zenxui
 
 # Your apps will thank you ✨
 ```

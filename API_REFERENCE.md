@@ -1,6 +1,6 @@
-# ZenUI API Reference
+# ZenXUI API Reference
 
-Complete API documentation for ZenUI components and enhanced theme system.
+Complete API documentation for ZenXUI components and enhanced theme system.
 
 ## Enhanced Theme System API
 
@@ -83,7 +83,7 @@ configureCacheOptions({
 A flexible container component that serves as the foundation for layout.
 
 ```tsx
-import { Box } from 'zenui-ui'
+import { Box } from 'zenxui'
 
 interface BoxProps extends ViewProps {
   children?: React.ReactNode
@@ -102,7 +102,7 @@ interface BoxProps extends ViewProps {
 Typography-aware text component with consistent styling.
 
 ```tsx
-import { Text } from 'zenui-ui'
+import { Text } from 'zenxui'
 
 interface TextProps extends TextProps {
   variant?: 'heading' | 'body' | 'caption'
@@ -117,7 +117,7 @@ interface TextProps extends TextProps {
 
 **Example:**
 ```tsx
-<Text variant="heading">Welcome to ZenUI</Text>
+<Text variant="heading">Welcome to ZenXUI</Text>
 <Text variant="body">This is body text content</Text>
 <Text variant="caption">Additional information</Text>
 ```
@@ -127,7 +127,7 @@ interface TextProps extends TextProps {
 Pressable button component with comprehensive theming, states, and variants.
 
 ```tsx
-import { Button } from 'zenui-ui'
+import { Button } from 'zenxui'
 
 interface ButtonProps extends TouchableOpacityProps {
   children: React.ReactNode
@@ -335,7 +335,7 @@ borderRadius.full  // 9999px
 
 ## Accessibility
 
-All ZenUI components include built-in accessibility features:
+All ZenXUI components include built-in accessibility features:
 
 ### Button Accessibility
 ```tsx
@@ -467,7 +467,7 @@ const styles = StyleSheet.create({
   <Button colorScheme="blue">Action</Button>
 </VStack>
 
-// After (ZenUI)
+// After (ZenXUI)
 <Box style={{ gap: 16 }}>
   <Text variant="heading">Title</Text>
   <Button colorScheme="primary">Action</Button>
@@ -480,7 +480,7 @@ const styles = StyleSheet.create({
 <Header centerComponent={{ text: 'Title' }} />
 <Button title="Click me" />
 
-// After (ZenUI)
+// After (ZenXUI)
 <Box style={{ padding: 16, alignItems: 'center' }}>
   <Text variant="heading">Title</Text>
 </Box>

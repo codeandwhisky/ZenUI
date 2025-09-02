@@ -1,6 +1,6 @@
-# ZenUI Core
+# ZenXUI Core
 
-A powerful, cross-platform design system core for React Native and React Native Web. ZenUI Core provides design tokens, theming utilities, and essential UI components that work seamlessly across mobile and web platforms.
+A powerful, cross-platform design system core for React Native and React Native Web. ZenXUI Core provides design tokens, theming utilities, and essential UI components that work seamlessly across mobile and web platforms.
 
 [![npm version](https://badge.fury.io/js/zenxui.svg)](https://badge.fury.io/js/zenxui)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -63,7 +63,7 @@ export function WelcomeScreen() {
     <Box className="flex-1 p-lg bg-gray50">
       <Stack spacing={16} className="items-center justify-center flex-1">
         <Text className="text-2xl font-bold text-gray900">
-          Welcome to ZenUI!
+          Welcome to ZenXUI!
         </Text>
         <Text className="text-base text-gray600 text-center">
           Build beautiful, accessible apps with ease
@@ -85,7 +85,7 @@ export function WelcomeScreen() {
 
 ## 🎨 Design Tokens
 
-ZenUI Core provides a comprehensive set of design tokens for consistent styling across your app.
+ZenXUI Core provides a comprehensive set of design tokens for consistent styling across your app.
 
 ### Colors
 
@@ -531,7 +531,7 @@ function SpinnerExample() {
 
 ## 🛠️ Utility Classes
 
-ZenUI Core includes a Tailwind-inspired utility class system for rapid styling:
+ZenXUI Core includes a Tailwind-inspired utility class system for rapid styling:
 
 ### Spacing Utilities
 
@@ -820,10 +820,10 @@ We welcome contributions! Please see our [Contributing Guide](../../CONTRIBUTING
 
 ```bash
 # Clone the repository
-git clone https://github.com/codeandwhisky/ZenUI.git
+git clone https://github.com/codeandwhisky/ZenXUI.git
 
 # Install dependencies
-cd ZenUI
+cd ZenXUI
 npm install
 
 # Start development
@@ -840,11 +840,11 @@ Apache License 2.0 - see [LICENSE](../../LICENSE) for details.
 
 ## 🙏 Support
 
-- 📖 [Documentation](https://zenui.dev)
-- 🐛 [Issue Tracker](https://github.com/codeandwhisky/ZenUI/issues)
-- 💬 [Discussions](https://github.com/codeandwhisky/ZenUI/discussions)
-- 🐦 [Twitter](https://twitter.com/zenui_dev)
+- 📖 [Documentation](https://ZenXUI.dev)
+- 🐛 [Issue Tracker](https://github.com/codeandwhisky/ZenXUI/issues)
+- 💬 [Discussions](https://github.com/codeandwhisky/ZenXUI/discussions)
+- 🐦 [Twitter](https://twitter.com/ZenXUI_dev)
 
 ---
 
-Made with ❤️ by the ZenUI team
+Made with ❤️ by the ZenXUI team

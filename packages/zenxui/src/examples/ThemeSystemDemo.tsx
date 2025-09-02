@@ -196,7 +196,7 @@ export const ThemeSystemDemo: React.FC = () => {
             marginBottom: 8,
             color: '#111827',
           }}>
-            ZenUI Enhanced Theme System
+            ZenXUI Enhanced Theme System
           </Text>
           
           <Text style={{

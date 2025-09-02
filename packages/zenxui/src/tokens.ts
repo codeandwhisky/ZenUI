@@ -1,4 +1,4 @@
-// Design tokens for ZenUI
+// Design tokens for ZenXUI
 // We build nested groups (e.g., colors.primary[100]) and also create flattened keys
 // (e.g., colors.primary100) so consumers can use either style similar to Gluestack.
 const nestedColors = {

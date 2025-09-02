@@ -1,7 +1,7 @@
 /**
  * Enhanced Theme System Types
  * 
- * This module defines the complete type system for ZenUI's enhanced theming.
+ * This module defines the complete type system for ZenXUI's enhanced theming.
  * It provides type-safe, performant, and highly customizable theming capabilities.
  */
 

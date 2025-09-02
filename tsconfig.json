@@ -18,7 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "zenxui": ["./packages/core/src"],
-      "zenui-ui": ["./packages/ui/src"]
+      "zenxui-ui": ["./packages/ui/src"]
     }
   },
   "include": ["packages/**/*"],

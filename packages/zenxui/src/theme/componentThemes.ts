@@ -1,7 +1,7 @@
 /**
  * Component Themes
  * 
- * Default theme definitions for all ZenUI components.
+ * Default theme definitions for all ZenXUI components.
  * These themes provide consistent styling while allowing full customization.
  */
 

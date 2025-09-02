@@ -1,6 +1,6 @@
 # Enhanced Theme System - Phase 1.1
 
-A comprehensive, performant, and highly customizable theming system for ZenUI that balances performance with customizability while maintaining excellent developer experience.
+A comprehensive, performant, and highly customizable theming system for ZenXUI that balances performance with customizability while maintaining excellent developer experience.
 
 ## 🎯 Objectives Achieved
 
@@ -95,7 +95,7 @@ const semanticColors = {
 ### Basic Theme Provider Setup
 
 ```tsx
-import { ThemeProvider, createTheme } from '@zenui/theme'
+import { ThemeProvider, createTheme } from '@ZenXUI/theme'
 
 const customTheme = createTheme({
   colors: {
@@ -117,7 +117,7 @@ function App() {
 ### Enhanced Button Component
 
 ```tsx
-import { Button } from '@zenui/components'
+import { Button } from '@ZenXUI/components'
 
 function ButtonDemo() {
   return (
@@ -148,7 +148,7 @@ function ButtonDemo() {
 ### Custom Component Theming
 
 ```tsx
-import { useComponentTheme } from '@zenui/theme'
+import { useComponentTheme } from '@ZenXUI/theme'
 
 function CustomCard() {
   const cardTheme = useComponentTheme('Card')
@@ -166,7 +166,7 @@ function CustomCard() {
 ### Responsive Values
 
 ```tsx
-import { useResponsiveValue } from '@zenui/theme'
+import { useResponsiveValue } from '@ZenXUI/theme'
 
 function ResponsiveComponent() {
   const spacing = useResponsiveValue({
@@ -268,4 +268,4 @@ function ResponsiveComponent() {
 
 ---
 
-*This enhanced theme system represents a significant step forward in ZenUI's evolution, providing the foundation for a truly world-class design system.*
+*This enhanced theme system represents a significant step forward in ZenXUI's evolution, providing the foundation for a truly world-class design system.*

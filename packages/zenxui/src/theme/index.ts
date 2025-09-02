@@ -1,5 +1,5 @@
 /**
- * Enhanced Theme System for ZenUI
+ * Enhanced Theme System for ZenXUI
  * 
  * A comprehensive, performant, and highly customizable theming system
  * that supports responsive design, semantic colors, and component-level theming.

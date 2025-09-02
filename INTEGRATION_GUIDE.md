@@ -1,6 +1,6 @@
-# ZenUI Integration Guide
+# ZenXUI Integration Guide
 
-This guide will help you integrate ZenUI's enhanced theme system into your React Native or React Native Web project.
+This guide will help you integrate ZenXUI's enhanced theme system into your React Native or React Native Web project.
 
 ## Table of Contents
 
@@ -20,13 +20,13 @@ This guide will help you integrate ZenUI's enhanced theme system into your React
 ### NPM
 
 ```bash
-npm install zenui-ui zenxui
+npm install zenxui
 ```
 
 ### Yarn
 
 ```bash
-yarn add zenui-ui zenxui
+yarn add zenxui
 ```
 
 ### Peer Dependencies
@@ -39,7 +39,7 @@ npm install react react-native
 
 ## Enhanced Theme Setup
 
-ZenUI v2.0 features a comprehensive theme system with performance optimizations and responsive design capabilities.
+ZenXUI v2.0 features a comprehensive theme system with performance optimizations and responsive design capabilities.
 
 ### Quick Start with Default Theme
 
@@ -47,13 +47,13 @@ ZenUI v2.0 features a comprehensive theme system with performance optimizations 
 // App.tsx
 import React from 'react'
 import { ThemeProvider } from 'zenxui'
-import { Box, Text, Button } from 'zenui-ui'
+import { Box, Text, Button } from 'ZenXUI'
 
 export default function App() {
   return (
     <ThemeProvider>
       <Box style={{ padding: 20 }}>
-        <Text variant="heading">Welcome to ZenUI</Text>
+        <Text variant="heading">Welcome to ZenXUI</Text>
         <Button variant="solid" colorScheme="primary" size="lg">
           Get Started
         </Button>
@@ -155,7 +155,7 @@ function ResponsiveComponent() {
 import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { ThemeProvider, createTheme } from 'zenxui'
-import { Box, Text, Button } from 'zenui-ui'
+import { Box, Text, Button } from 'ZenXUI'
 
 // Optional: Create custom theme
 const appTheme = createTheme({
@@ -171,7 +171,7 @@ export default function App() {
     <ThemeProvider theme={appTheme}>
       <SafeAreaView style={{ flex: 1 }}>
         <Box style={{ padding: 20, flex: 1 }}>
-          <Text variant="heading">Welcome to ZenUI</Text>
+          <Text variant="heading">Welcome to ZenXUI</Text>
           <Button 
             variant="solid" 
             colorScheme="primary"
@@ -213,7 +213,7 @@ module.exports = (async () => {
 
 ## Performance Optimization
 
-ZenUI's enhanced theme system includes several performance optimizations that work automatically, but you can also leverage additional techniques:
+ZenXUI's enhanced theme system includes several performance optimizations that work automatically, but you can also leverage additional techniques:
 
 ### 1. Automatic Performance Features
 
@@ -335,11 +335,11 @@ Optimize your bundle size with tree-shaking:
 
 ```tsx
 // ✅ Good: Import only what you need
-import { Button, Text } from 'zenui-ui'
+import { Button, Text } from 'ZenXUI'
 import { useTheme, createTheme } from 'zenxui'
 
 // ❌ Avoid: Importing entire library
-import * as ZenUI from 'zenui-ui'
+import * as ZenXUI from 'zenxui'
 ```
 
 ## Advanced Theming Configuration
@@ -656,7 +656,7 @@ module.exports = {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ZenUI App</title>
+  <title>ZenXUI App</title>
   <style>
     /* Ensure body and root have full height */
     html, body, #root {
@@ -725,12 +725,12 @@ export default function App({ Component, pageProps }: AppProps) {
 
 ```tsx
 // pages/index.tsx
-import { Box, Text, Button } from 'zenui-ui'
+import { Box, Text, Button } from 'ZenXUI'
 
 export default function Home() {
   return (
     <Box style={{ padding: 40 }}>
-      <Text variant="heading">Welcome to ZenUI with Next.js</Text>
+      <Text variant="heading">Welcome to ZenXUI with Next.js</Text>
       <Button variant="solid" colorScheme="primary">
         Get Started
       </Button>
@@ -744,9 +744,9 @@ export default function Home() {
 ### 1. Installation
 
 ```bash
-npx create-expo-app MyZenUIApp
-cd MyZenUIApp
-npm install zenui-ui zenui-theme
+npx create-expo-app MyZenXUIApp
+cd MyZenXUIApp
+npm install zenxui zenxui-theme
 ```
 
 ### 2. App Configuration
@@ -755,13 +755,13 @@ npm install zenui-ui zenui-theme
 // App.tsx
 import { StatusBar } from 'expo-status-bar'
 import { ThemeProvider } from 'zenxui'
-import { Box, Text, Button } from 'zenui-ui'
+import { Box, Text, Button } from 'ZenXUI'
 
 export default function App() {
   return (
     <ThemeProvider>
       <Box style={{ flex: 1, padding: 20, justifyContent: 'center' }}>
-        <Text variant="heading">ZenUI + Expo</Text>
+        <Text variant="heading">ZenXUI + Expo</Text>
         <Button variant="solid" colorScheme="primary">
           Hello Expo!
         </Button>
@@ -817,7 +817,7 @@ export const customTheme = {
 ```tsx
 // App.tsx
 import { ThemeProvider, useColorMode } from 'zenxui'
-import { Button } from 'zenui-ui'
+import { Button } from 'ZenXUI'
 
 function ThemeToggle() {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -871,8 +871,8 @@ export default function App() {
 ### 2. Type Augmentation
 
 ```tsx
-// types/zenui.d.ts
-declare module 'zenui-ui' {
+// types/ZenXUI.d.ts
+declare module 'zenxui' {
   export interface CustomTheme {
     colors: {
       brand: {
@@ -890,7 +890,7 @@ declare module 'zenui-ui' {
 ```
 src/
 ├── components/
-│   ├── ui/           # ZenUI component extensions
+│   ├── ui/           # ZenXUI component extensions
 │   ├── common/       # Shared components
 │   └── screens/      # Screen components
 ├── theme/
@@ -927,7 +927,7 @@ export const commonStyles = {
 
 ```tsx
 // components/ui/Card.tsx
-import { Box, BoxProps } from 'zenui-ui'
+import { Box, BoxProps } from 'zenxui'
 import { commonStyles } from '@/utils/styles'
 
 interface CardProps extends BoxProps {
@@ -1216,13 +1216,13 @@ function DebugComponent() {
 
 ### Getting Help
 
-- Check the [GitHub Issues](https://github.com/codeandwhisky/ZenUI/issues)
+- Check the [GitHub Issues](https://github.com/codeandwhisky/ZenXUI/issues)
 - Read the [Enhanced Theme System Documentation](./packages/zenxui/src/theme/README.md)
 - Browse [Component Examples](./packages/zenxui/src/examples/)
-- Join our [Discord Community](https://discord.gg/zenui)
+- Join our [Discord Community](https://discord.gg/ZenXUI)
 
 ---
 
-**Happy coding with ZenUI's Enhanced Theme System! 🚀✨**
+**Happy coding with ZenXUI's Enhanced Theme System! 🚀✨**
 
 *Experience the perfect balance of performance, customizability, and developer experience.*

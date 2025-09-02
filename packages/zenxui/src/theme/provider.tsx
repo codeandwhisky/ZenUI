@@ -140,7 +140,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     if (__DEV__) {
       const errors = validateTheme(finalTheme)
       if (errors.length > 0) {
-        console.warn('ZenUI Theme Validation Errors:', errors)
+        console.warn('ZenXUI Theme Validation Errors:', errors)
       }
     }
     
@@ -201,7 +201,7 @@ export const useTheme = (): ThemeContextValue => {
   if (!context) {
     throw new Error(
       'useTheme must be used within a ThemeProvider. ' +
-      'Wrap your app with <ThemeProvider> to use ZenUI components.'
+      'Wrap your app with <ThemeProvider> to use ZenXUI components.'
     )
   }
   
