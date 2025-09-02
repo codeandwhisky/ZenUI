@@ -17,9 +17,9 @@ A cross-platform, utility-first, themeable design UI library for React Native an
 ### Installation
 
 ```bash
-npm install @zenui/ui @zenui/theme
+npm install @zenui/ui zenui-theme
 # or
-yarn add @zenui/ui @zenui/theme
+yarn add @zenui/ui zenui-theme
 ```
 
 ### Basic Usage
@@ -77,7 +77,7 @@ export default function App() {
 ZenUI includes a comprehensive theming system with design tokens:
 
 ```tsx
-import { ThemeProvider, useTheme } from '@zenui/theme'
+import { ThemeProvider, useTheme } from 'zenui-theme'
 
 function MyComponent() {
   const { theme, colorMode, toggleColorMode } = useTheme()
@@ -93,11 +93,12 @@ function MyComponent() {
 ### Design Tokens
 
 ```tsx
-import { colors, spacing, fontSize, borderRadius } from '@zenui/theme'
+import { colors, spacing, fontSize, borderRadius } from 'zenui-theme'
 
 const customStyle = {
-  backgroundColor: colors.primary[500],
-  padding: spacing[4],
+  // nested or flattened access
+  backgroundColor: colors.primary500,
+  padding: spacing.md,
   borderRadius: borderRadius.md,
   fontSize: fontSize.lg,
 }

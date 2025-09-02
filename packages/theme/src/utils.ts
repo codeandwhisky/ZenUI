@@ -48,12 +48,13 @@ export function createStyleObject(className: string) {
   const classes = className.split(/\s+/).filter(Boolean)
 
   classes.forEach(cls => {
-    // Padding: p-4, px-4, py-2, pt-1 etc.
-    const pMatch = cls.match(/^p(?:([trblxy])?)-(\d+)$/)
+    // Padding: p-4, px-4, py-2, pt-1 etc. Also support named spacing: p-xs, p-sm, p-md, p-lg, p-xl, p-2xl
+    const pMatch = cls.match(/^p(?:([trblxy])?)-([a-z0-9]+)$/)
     if (pMatch) {
       const dir = pMatch[1]
-      const val = parseInt(pMatch[2], 10)
-  const size = (tokenSpacing as any)[val] ?? val * 4
+      const raw = pMatch[2]
+      const valNum = /^[0-9]+$/.test(raw) ? parseInt(raw, 10) : undefined
+      const size = valNum !== undefined ? (tokenSpacing as any)[valNum] ?? valNum * 4 : (tokenSpacing as any)[raw]
       if (!dir) styles.padding = size
       if (dir === 'x') { styles.paddingHorizontal = size }
       if (dir === 'y') { styles.paddingVertical = size }
@@ -63,12 +64,13 @@ export function createStyleObject(className: string) {
       if (dir === 'l') { styles.paddingLeft = size }
     }
 
-    // Margin: m-4, mx-2 etc.
-    const mMatch = cls.match(/^m(?:([trblxy])?)-(\d+)$/)
+    // Margin: m-4, mx-2 etc. Also support named spacing: m-xs, m-sm, m-md, m-lg, m-xl, m-2xl
+    const mMatch = cls.match(/^m(?:([trblxy])?)-([a-z0-9]+)$/)
     if (mMatch) {
       const dir = mMatch[1]
-      const val = parseInt(mMatch[2], 10)
-  const size = (tokenSpacing as any)[val] ?? val * 4
+      const raw = mMatch[2]
+      const valNum = /^[0-9]+$/.test(raw) ? parseInt(raw, 10) : undefined
+      const size = valNum !== undefined ? (tokenSpacing as any)[valNum] ?? valNum * 4 : (tokenSpacing as any)[raw]
       if (!dir) styles.margin = size
       if (dir === 'x') { styles.marginHorizontal = size }
       if (dir === 'y') { styles.marginVertical = size }
@@ -78,8 +80,9 @@ export function createStyleObject(className: string) {
       if (dir === 'l') { styles.marginLeft = size }
     }
 
-    // Background color: bg-primary-500 or bg-primary
+    // Background color: support bg-primary-500, bg-primary, and flattened bg-primary500
     const bgMatch = cls.match(/^bg-([a-zA-Z0-9]+)(?:-(\d+))?$/)
+    const bgFlatMatch = cls.match(/^bg-([a-zA-Z]+)([0-9]{2,3})$/)
     if (bgMatch) {
       const key = bgMatch[1]
       const shade = bgMatch[2]
@@ -90,10 +93,16 @@ export function createStyleObject(className: string) {
         // if no shade specified, prefer 500
         styles.backgroundColor = (colorGroup as any)[500] ?? (colorGroup as any)[Object.keys(colorGroup)[0]]
       }
+    } else if (bgFlatMatch) {
+      const key = bgFlatMatch[1]
+      const shade = bgFlatMatch[2]
+      const flatKey = `${key}${shade}`
+      if ((tokenColors as any)[flatKey]) styles.backgroundColor = (tokenColors as any)[flatKey]
     }
 
-    // Text color: text-primary-500
+    // Text color: support text-primary-500, text-primary, and flattened text-primary500
     const textMatch = cls.match(/^text-([a-zA-Z0-9]+)(?:-(\d+))?$/)
+    const textFlatMatch = cls.match(/^text-([a-zA-Z]+)([0-9]{2,3})$/)
     if (textMatch) {
       const key = textMatch[1]
       const shade = textMatch[2]
@@ -107,13 +116,18 @@ export function createStyleObject(className: string) {
       if ((tokenFontSize as any)[key]) {
         styles.fontSize = (tokenFontSize as any)[key]
       }
+    } else if (textFlatMatch) {
+      const key = textFlatMatch[1]
+      const shade = textFlatMatch[2]
+      const flatKey = `${key}${shade}`
+      if ((tokenColors as any)[flatKey]) styles.color = (tokenColors as any)[flatKey]
     }
 
     // font size: text-lg etc. (single token)
     const sizeMatch = cls.match(/^text-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl)$/)
     if (sizeMatch) {
       const s = sizeMatch[1]
-  styles.fontSize = (tokenFontSize as any)[s]
+      styles.fontSize = (tokenFontSize as any)[s]
     }
 
     // rounded, rounded-sm, rounded-full
@@ -134,22 +148,24 @@ export function createStyleObject(className: string) {
     const shadowMatch = cls.match(/^shadow(?:-(sm|base|md|lg|xl|2xl))?$/)
     if (shadowMatch) {
       const s = shadowMatch[1] || 'base'
-  const shadowToken = (tokenShadows as any)[s]
+      const shadowToken = (tokenShadows as any)[s]
       if (shadowToken) {
         Object.assign(styles, shadowToken)
       }
     }
 
-    // width/height shortcuts: w-32 h-8 -> map to spacing or numbers
-    const wMatch = cls.match(/^w-(\d+)$/)
+    // width/height shortcuts: support numeric and named spacing keys: w-32, w-sm, w-md
+    const wMatch = cls.match(/^w-([a-z0-9]+)$/)
     if (wMatch) {
-      const v = parseInt(wMatch[1], 10)
-      styles.width = (tokenSpacing as any)[v] ?? v
+      const raw = wMatch[1]
+      const vNum = /^[0-9]+$/.test(raw) ? parseInt(raw, 10) : undefined
+      styles.width = vNum !== undefined ? (tokenSpacing as any)[vNum] ?? vNum : (tokenSpacing as any)[raw] ?? raw
     }
-    const hMatch = cls.match(/^h-(\d+)$/)
+    const hMatch = cls.match(/^h-([a-z0-9]+)$/)
     if (hMatch) {
-      const v = parseInt(hMatch[1], 10)
-      styles.height = (tokenSpacing as any)[v] ?? v
+      const raw = hMatch[1]
+      const vNum = /^[0-9]+$/.test(raw) ? parseInt(raw, 10) : undefined
+      styles.height = vNum !== undefined ? (tokenSpacing as any)[vNum] ?? vNum : (tokenSpacing as any)[raw] ?? raw
     }
 
     // flex, flex-row, items-center, justify-center
@@ -171,12 +187,18 @@ export function createStyleObject(className: string) {
     // border and border color
     if (cls === 'border') styles.borderWidth = 1
     const borderColorMatch = cls.match(/^border-([a-zA-Z0-9]+)(?:-(\d+))?$/)
+    const borderFlatMatch = cls.match(/^border-([a-zA-Z]+)([0-9]{2,3})$/)
     if (borderColorMatch) {
       const key = borderColorMatch[1]
       const shade = borderColorMatch[2]
       const colorGroup = (tokenColors as any)[key]
       if (shade && colorGroup && (colorGroup as any)[shade]) styles.borderColor = (colorGroup as any)[shade]
       else if (colorGroup) styles.borderColor = (colorGroup as any)[500] ?? (colorGroup as any)[Object.keys(colorGroup)[0]]
+    } else if (borderFlatMatch) {
+      const key = borderFlatMatch[1]
+      const shade = borderFlatMatch[2]
+      const flatKey = `${key}${shade}`
+      if ((tokenColors as any)[flatKey]) styles.borderColor = (tokenColors as any)[flatKey]
     }
 
     // text alignment
@@ -193,10 +215,11 @@ export function createStyleObject(className: string) {
     if (cls === 'font-bold') styles.fontWeight = '700'
 
     // gap (for Stack/row simulation - adds margin to children container usage)
-    const gapMatch = cls.match(/^gap-(\d+)$/)
+    const gapMatch = cls.match(/^gap-([a-z0-9]+)$/)
     if (gapMatch) {
-      const v = parseInt(gapMatch[1], 10)
-      styles.gap = (tokenSpacing as any)[v] ?? v
+      const raw = gapMatch[1]
+      const vNum = /^[0-9]+$/.test(raw) ? parseInt(raw, 10) : undefined
+      styles.gap = vNum !== undefined ? (tokenSpacing as any)[vNum] ?? vNum : (tokenSpacing as any)[raw]
     }
 
     // full width / full height

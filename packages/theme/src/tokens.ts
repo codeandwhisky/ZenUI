@@ -1,5 +1,7 @@
 // Design tokens for ZenUI
-export const colors = {
+// We build nested groups (e.g., colors.primary[100]) and also create flattened keys
+// (e.g., colors.primary100) so consumers can use either style similar to Gluestack.
+const nestedColors = {
   // Primary colors
   primary: {
     50: '#f0f9ff',
@@ -104,7 +106,35 @@ export const colors = {
   transparent: 'transparent',
 }
 
-export const spacing = {
+// Export colors so that both nested access (colors.primary[100]) and flattened
+// access (colors.primary100) are available. We copy nestedColors then add
+// flattened keys for convenience.
+// Types: produce a type that includes both nested groups and flattened keys.
+type NestedColors = typeof nestedColors
+
+type FlattenedKeys<T extends Record<string, any>> = {
+  [G in keyof T as T[G] extends Record<string, any> ? `${Extract<G, string>}${Extract<keyof T[G], string>}` : never]: T[G] extends Record<string, any> ? T[G][Extract<keyof T[G], string>] : never
+}
+
+export type Colors = NestedColors & FlattenedKeys<NestedColors> & { white: string; black: string; transparent: string }
+
+// runtime: start with nested groups and then append flattened keys
+export const colors: Colors = { ...nestedColors } as unknown as Colors
+
+Object.keys(nestedColors).forEach(groupKey => {
+  const group = (nestedColors as any)[groupKey]
+  if (group && typeof group === 'object') {
+    Object.keys(group).forEach(shade => {
+      try {
+        ;(colors as any)[`${groupKey}${shade}`] = (group as any)[shade]
+      } catch (e) {
+        // ignore
+      }
+    })
+  }
+})
+
+const baseSpacing = {
   0: 0,
   1: 4,
   2: 8,
@@ -136,6 +166,20 @@ export const spacing = {
   80: 320,
   96: 384,
 }
+
+// Add named aliases similar to Gluestack (reasonable defaults):
+// xs -> 1 (4), sm -> 2 (8), md -> 4 (16), lg -> 6 (24), xl -> 8 (32), 2xl -> 12 (48)
+export const spacing = {
+  ...baseSpacing,
+  xs: baseSpacing[1],
+  sm: baseSpacing[2],
+  md: baseSpacing[4],
+  lg: baseSpacing[6],
+  xl: baseSpacing[8],
+  '2xl': baseSpacing[12],
+} as const
+
+export type Spacing = typeof spacing
 
 export const fontSize = {
   xs: 12,

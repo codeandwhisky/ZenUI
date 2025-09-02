@@ -383,11 +383,11 @@ src/
 
 ```tsx
 // utils/styles.ts
-import { spacing, colors } from '@zenui/theme'
+import { spacing, colors } from 'zenui-theme'
 
 export const commonStyles = {
   container: {
-    padding: spacing[4],
+  padding: spacing[4], // or spacing.md
     backgroundColor: colors.white,
   },
   card: {

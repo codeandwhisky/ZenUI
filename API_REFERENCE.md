@@ -152,10 +152,14 @@ const { colorMode, toggleColorMode, setColorMode } = useColorMode()
 ```tsx
 import { colors } from '@zenui/theme'
 
-// Primary colors
+// Primary colors (nested and flattened access)
 colors.primary[50]   // Lightest
 colors.primary[500]  // Base
 colors.primary[900]  // Darkest
+// Flattened access
+colors.primary50
+colors.primary500
+colors.primary900
 
 // Available color palettes:
 // primary, secondary, success, warning, error, info, gray
@@ -166,10 +170,15 @@ colors.primary[900]  // Darkest
 ```tsx
 import { spacing } from '@zenui/theme'
 
+// Named spacing aliases
 spacing[1]  // 4px
 spacing[2]  // 8px
 spacing[4]  // 16px
 spacing[8]  // 32px
+spacing.xs  // 4px (alias)
+spacing.sm  // 8px (alias)
+spacing.md  // 16px (alias)
+spacing.lg  // 24px (alias)
 // ... up to spacing[96] (384px)
 ```
 

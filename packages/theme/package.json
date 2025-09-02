@@ -1,9 +1,9 @@
 {
   "name": "zenui-theme",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Design tokens, Tailwind config, and theming utilities for ZenUI",
   "main": "lib/index.js",
-  "module": "lib/index.esm.js",
+  "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
   "files": [
     "lib",

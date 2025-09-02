@@ -39,12 +39,13 @@ Key goals:
 - `cn(...)` — className joiner
 - `createStyleObject(className)` — converts a small subset of Tailwind-like classes into React Native style objects. Supports:
   - spacing: p-, px-, py-, pt-, pr-, pb-, pl-, m- (maps to token spacing)
-  - colors: bg-{color}-{shade}, text-{color}-{shade}
+  - spacing: p-, px-, py-, pt-, pr-, pb-, pl-, m- (maps to token spacing). Also supports named spacing aliases: xs, sm, md, lg, xl, 2xl (e.g., `p-md`).
+  - colors: bg-{color}-{shade}, text-{color}-{shade} and flattened forms like `bg-primary500` / `text-primary700` for convenience.
   - typography: text-xs|sm|base|lg|xl|2xl
   - rounded: rounded, rounded-sm|md|lg|xl|2xl|3xl|full
   - shadow: shadow, shadow-sm|md|lg|xl|2xl
   - layout: flex, flex-row, flex-col, items-center, justify-center
-  - width/height: w-<n>, h-<n> (maps to spacing tokens)
+  - width/height: w-<n>, h-<n> (maps to spacing tokens and accepts named spacing keys like `w-md`)
 
 4) Small prebuilt, theme-aware components (mobile-focused):
 - Box, Text, Button, Input, Stack (VStack/HStack), Modal (simple), Avatar, Badge, Spinner
@@ -92,10 +93,11 @@ import { Box, Text, Button, Input, Stack, Avatar, Badge } from 'zenui-theme'
 
 export function Example() {
   return (
-    <Box className="p-4 bg-primary-50">
+    // using named spacing and flattened color class
+    <Box className="p-md bg-primary50">
       <Stack spacing={12}>
         <Avatar size={48} />
-        <Text className="text-lg text-primary-700">Hello</Text>
+        <Text className="text-lg text-primary700">Hello</Text>
         <Input placeholder="Enter name" />
         <Button>Save</Button>
         <Badge>New</Badge>
@@ -138,13 +140,14 @@ You can import tokens directly when building custom components or styles:
 ```ts
 import { colors, spacing, fontSize } from 'zenui-theme'
 
-console.log(colors.primary[500], spacing[4], fontSize.lg)
+// dot-access flattened tokens and named spacing
+console.log(colors.primary500, spacing.md, fontSize.lg)
 ```
 
 Switching color mode at runtime:
 
 ```tsx
-import { useColorMode } from '@codeandwhisky/theme'
+import { useColorMode } from 'zenui-theme'
 
 function Toggle() {
   const { colorMode, toggleColorMode } = useColorMode()
