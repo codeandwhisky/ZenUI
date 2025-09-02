@@ -17,7 +17,7 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "zenui-core": ["./packages/core/src"],
+      "zenxui": ["./packages/core/src"],
       "zenui-ui": ["./packages/ui/src"]
     }
   },

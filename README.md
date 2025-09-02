@@ -17,16 +17,16 @@ A cross-platform, utility-first, themeable design UI library for React Native an
 ### Installation
 
 ```bash
-npm install zenui-ui zenui-core
+npm install zenui-ui zenxui
 # or
-yarn add zenui-ui zenui-core
+yarn add zenui-ui zenxui
 ```
 
 ### Basic Usage
 
 ```tsx
 import React from 'react'
-import { ThemeProvider } from 'zenui-core'
+import { ThemeProvider } from 'zenxui'
 import { Box, Text, Button } from 'zenui-ui'
 
 export default function App() {
@@ -77,7 +77,7 @@ export default function App() {
 ZenUI includes a comprehensive theming system with design tokens:
 
 ```tsx
-import { ThemeProvider, useTheme } from 'zenui-core'
+import { ThemeProvider, useTheme } from 'zenxui'
 
 function MyComponent() {
   const { theme, colorMode, toggleColorMode } = useTheme()
@@ -93,7 +93,7 @@ function MyComponent() {
 ### Design Tokens
 
 ```tsx
-import { colors, spacing, fontSize, borderRadius } from 'zenui-core'
+import { colors, spacing, fontSize, borderRadius } from 'zenxui'
 
 const customStyle = {
   // nested or flattened access
@@ -171,7 +171,7 @@ function LayoutExample() {
 ### Custom Theme
 
 ```tsx
-import { ThemeProvider } from 'zenui-core'
+import { ThemeProvider } from 'zenxui'
 
 const customTheme = {
   colors: {
