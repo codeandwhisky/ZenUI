@@ -1,0 +1,25 @@
+{
+  "name": "@zenxui/bench",
+  "version": "0.1.0",
+  "description": "Performance benchmarking for ZenXUI components",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "bench": "node dist/bench.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-native": "^0.72.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "zenxui": "^0.1.1"
+  }
+}
