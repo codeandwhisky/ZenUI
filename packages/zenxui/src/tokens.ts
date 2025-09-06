@@ -179,8 +179,6 @@ export const spacing = {
   '2xl': baseSpacing[12],
 } as const
 
-export type Spacing = typeof spacing
-
 export const fontSize = {
   xs: 12,
   sm: 14,
@@ -290,3 +288,26 @@ export const zIndex = {
   toast: 1700,
   tooltip: 1800,
 }
+
+// Export unified tokens object
+export const tokens = {
+  colors,
+  spacing,
+  fontSizes: fontSize,
+  lineHeights: lineHeight,
+  fontWeights: fontWeight,
+  letterSpacings: {}, // Not defined yet
+  radii: borderRadius,
+  shadows,
+  zIndex,
+}
+
+// Export types  
+export type Spacing = typeof spacing
+export type FontSizes = typeof fontSize
+export type LineHeights = typeof lineHeight
+export type FontWeights = typeof fontWeight
+export type BorderRadius = typeof borderRadius
+export type Shadows = typeof shadows
+export type ZIndex = typeof zIndex
+export type Tokens = typeof tokens

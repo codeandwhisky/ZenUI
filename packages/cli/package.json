@@ -1,0 +1,39 @@
+{
+  "name": "@zenxui/cli",
+  "version": "0.1.0",
+  "description": "ZenXUI CLI tool for component generation and theme management",
+  "main": "dist/index.js",
+  "bin": {
+    "uxlib": "./dist/cli.js",
+    "zenxui": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts src/cli.ts --format cjs --dts --shims",
+    "dev": "tsup src/index.ts src/cli.ts --format cjs --dts --shims --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "inquirer": "^8.2.6",
+    "fs-extra": "^11.1.1",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "glob": "^10.3.10"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^8.2.10",
+    "@types/node": "^20.10.4",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.70.0"
+  }
+}
